@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 33336863}
   - component: {fileID: 33336866}
   - component: {fileID: 33336865}
+  - component: {fileID: 33336867}
   m_Layer: 0
   m_Name: ball
   m_TagString: Untagged
@@ -385,12 +386,24 @@ CircleCollider2D:
   m_GameObject: {fileID: 33336862}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d7eb93234022c48218fe5fa6bdf93c37, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.66
+--- !u!114 &33336867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 33336862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e04a40cb8fd9436682b41f40dc30758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &115642937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,9 +1119,10 @@ GameObject:
   - component: {fileID: 573889622}
   - component: {fileID: 573889625}
   - component: {fileID: 573889624}
+  - component: {fileID: 573889626}
   m_Layer: 0
-  m_Name: paddle
-  m_TagString: Untagged
+  m_Name: racket
+  m_TagString: racket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1168,7 +1182,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 573889621}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1180,7 +1194,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &573889625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1195,6 +1209,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4.9599996, y: 0.80999994}
+--- !u!114 &573889626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 573889621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea2ce88d7afb4bd7b1c43366c0d9364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
 --- !u!1 &621430153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3971,7 +3997,7 @@ GameObject:
   - component: {fileID: 1812426118}
   m_Layer: 0
   m_Name: bottom
-  m_TagString: Untagged
+  m_TagString: bottom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
